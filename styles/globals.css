@@ -1,26 +1,18 @@
 @import "tailwindcss";
 
+@theme {
+  
+  --color-desaturatedDarkCyan: hsl(180, 29%, 50%);
+  --color-lightGrayishCyan: hsl(180, 52%, 96%);
+  --color-lightGrayishCyan2: hsl(180, 31%, 95%);
+  --color-darkGrayishCyan: hsl(180, 8%, 52%);
+  --color-veryDarkGrayishCyan: hsl(180, 14%, 20%);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  background-color: var(--color-lightGrayishCyan);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.job-card + div:hover {
+  border-left: 6px solid var(--color-desaturatedDarkCyan);
 }
